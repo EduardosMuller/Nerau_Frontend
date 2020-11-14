@@ -3,5 +3,402 @@
   src: url("/assets//fonts/AvertaBold.woff") format("woff"),
        url("/assets//fonts/Averta.woff") format("woff");
 }
+*{
+  padding:0;
+  margin:0;
+}
+.header{
+
+  max-width: 1960px;
+}
+
+.header__nav{
+  position: fixed;
+  z-index: 1;
+  margin-left:18.65%;
+  max-width: 1960px;
+}
+
+.header__nav__logo{
+  width:122.95px;
+  height:80px;
+}
+.header__nav__list{
+  list-style-type: none;
+  align-items: center;
+  margin-left: 126px;
+}
+
+.header__nav__list__item{
+display: inline;
+color:white;
+}
+.header__nav__navbar{
+display: inline-flex;
+}
+
+.header__nav__text{
+  font-family: "Pt Sans";
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  margin: 33px 48px 41px 0;
+  color:white;
+}
+.header__nav__text:hover{
+
+    color:#78BE21
+}
+
+.header__nav__btn--white{
+  background:white;
+  color:#317CAA;
+  padding:16px 26px;
+  border-radius: 40px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Averta";
+  font-weight: bold;
+  line-height: 17px;
+  margin: 40px 48px 41px 0;
+}
+
+.header__nav__dropdown{
+  border: 1px solid #626262;
+  box-sizing: border-box;
+}
 
 
+.div__img--principal{
+  width:1920px;
+  height:765px;
+  background:linear-gradient(180deg,#050626 -2.16%, rgba(2, 2, 15, 0.381395) 19.67%, rgba(0, 1, 4, 0.0988803) 43.46%, rgba(0, 0, 0, 0) 54.97%);
+  opacity: 1;
+}
+
+
+.card__horizontal{
+  display: flex;
+  flex-direction: row;
+}
+
+
+/*Buttons BEM Methodologies */
+
+.button{
+  padding:16px 26px;
+  border-radius: 40px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Averta";
+  font-weight: bold;
+  line-height: 17px;
+  margin: 40px 48px 41px 0;
+  transition: 0.5s;
+}
+.button:link{
+  text-decoration: none;
+}
+
+.button--white--blue{
+  background: white;
+  color:#317CAA;
+}
+.button--white--blue:hover{
+  color: white;
+  background:#317CAA;
+  border: 1px solid  #317CAA;
+}
+
+.button--white--bluemarine{
+  background:white;
+  color: #03257E;
+}
+.button--white--bluemarine:hover{
+  background: #03257E ;
+  color:white;
+  border: 1px solid  white;
+}
+
+.button--white--green{
+  padding:5px 29px;
+  background:white;
+  color: #78BE21;
+  border: 1px solid #78BE21;
+  box-sizing: border-box;
+  border-radius: 20px
+}
+.button--white--green:hover{
+  color: #78BE21;
+
+}
+.button--white--green--active{
+  padding:5px 29px;
+  background: #78BE21 ;
+  color:white;
+  box-shadow: 0px 5px 14px rgba(7, 206, 110, 0.34)
+}
+.button--white--green--active:hover{
+ color: white;
+}
+.button--white--orange{
+  background: white;
+  color:#FF7F41
+}
+.button--white--orange:hover{
+  background: #FF7F41;
+  color:white;
+  border: 1px solid  white;
+}
+
+.button--orange{
+  background: #FF5E0F;
+  color:white;
+}
+.button--orange:hover{
+  background:white;
+  color:#FF5E0F;
+  border: 1px solid  #FF5E0F;
+}
+
+.button--yellow{
+  background: #FFBF3F;
+  color:white;
+}
+.button--yellow:hover{
+  background:white;
+  color:#FFBF3F;
+  border: 1px solid  #FFBF3F;
+}
+
+.button--blue{
+  background:#56CCF2;
+  color: #03257E;
+}
+.button--blue:hover{
+  background: #03257E;
+  color:#56CCF2;
+  border: 1px solid  #56CCF2;
+}
+
+.button--white--gray{
+  background: white;
+  color:#4F4F40;
+  border:1px solid #e0e0e0;
+}
+.button--white--gray:hover{
+  background: #4F4F40;
+  color:white;
+  border:1px solid white;
+}
+/* Texts BEM  Methodologies */
+
+  /* Text PT Sans */
+
+.text{
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+}
+.text--bold{
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+}
+.text--gray{
+  color:#6A6A57
+}
+.text--darkblue{
+  color:#051339
+}
+  /* Text Averta */
+
+.text__title{
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 49px;
+}
+
+.text__subtitle{
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 45px;
+}
+
+.text__subtitle--white{
+  color:white;
+}
+
+.text__subtitle--orange{
+  color:#FF5E0F;
+}
+
+.text__subtitle--yellow{
+  color:#FFBF3F;
+}
+
+.text__subtitle--violet{
+  color:#606395;
+}
+
+.text__subtitle--green{
+  color:#78BE21;
+}
+
+.text__subtitle--darkorange {
+  color:#FA4616
+}
+
+.text__info{
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 23px;
+}
+
+
+/* Cards BEM Methodologies*/
+
+.card{
+  max-width: 414px;
+  height: 403px;
+  display: inline;
+  clear: right;
+}
+.card__image{
+  max-width: 414px;
+  height: 290px;
+}
+
+
+.container{
+  display: grid;
+  grid-template-columns: auto auto auto
+}
+
+
+/* Content BEM Methologies*/
+
+
+.section--background--gray{
+  background: #F2F2EE;
+}
+.section--background--blue{
+  background:#4698CA;
+}
+.section--background--image{
+  background-image: url("/assets/images/share-carousel/Elements.png");
+}
+
+
+
+/*Footer BEM Methodologies*/
+
+.footer__top{
+background:#03257E;
+height:180px;
+}
+.footer__middle{
+background:#012765;
+height:634px;
+display: grid;
+grid-template-columns: auto auto auto;
+}
+.footer__bottom{
+background:#002053;
+height:90px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+
+
+.carousel{
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+.carousel__animation{
+  height: 288px;
+  width: 1242px;
+  
+  background: url("/assets/images/share-carousel/carousel/carousel.png");
+  transform: translate3d(0, 0, 0);
+  animation: moveSlideshow 30s linear infinite;
+}
+@keyframes moveSlideshow {
+  100% { 
+    transform: translateX(-100%);  
+  }
+  
+}
+.image__navbar--logo{
+  width:122.95px;
+  height:80px;
+}
+.image__fotter--logo{
+  width:184px;
+  height:124px;
+}
+
+.image__primary--background{
+  width:1920px;
+  height:1200px; 
+}
+.image__card--size{
+  width:414px;
+  height:290px;
+}
+.image__card__icon--size{
+  width:120px;
+  height:120px;
+}
+.image--energy{
+  width:605px;
+  height:477px;
+}
+.image--flavor{
+  width:1042px;
+  height:780px
+}
+.image--happy{
+  width:288px;
+  height:187px;
+} 
+.image--sport{
+  width:288px;
+  height:288px;
+}
+.image--partner{
+  width:594px;
+  height:463px;
+}
+
+.image--cards{
+  width:57px;
+  height:35px;
+}
+.image--certificate{
+  width:126px;
+  height:72px;
+}
+.image--nerau{
+  width:88px;
+  height:28px;
+}
