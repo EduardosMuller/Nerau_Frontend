@@ -1,24 +1,27 @@
 @font-face {
   font-family: "Averta";
-  src: url("/assets//fonts/AvertaBold.woff") format("woff"),
-       url("/assets//fonts/Averta.woff") format("woff");
+  src: url("/assets/fonts/AvertaBold.woff") format("woff"),
+       url("/assets/fonts/Averta.woff") format("woff"),
+       url("/assets/fonts/AvertaLight.woff") format("woff");
 }
 *{
   padding:0;
   margin:0;
 }
 .header{
-
-  max-width: 1960px;
-}
-
-.header__nav{
+  width: 1920px;
+  height:104px;
+  background:rgba(0, 0, 0, 0.212);
   position: fixed;
   z-index: 1;
+}
+.header__nav__navbar{
+  display: inline-flex;
+  }
+.header__nav{
   margin-left:18.65%;
   max-width: 1960px;
 }
-
 .header__nav__logo{
   width:122.95px;
   height:80px;
@@ -26,17 +29,11 @@
 .header__nav__list{
   list-style-type: none;
   align-items: center;
-  margin-left: 126px;
+  margin-left: 76px;
 }
-
 .header__nav__list__item{
 display: inline;
-color:white;
 }
-.header__nav__navbar{
-display: inline-flex;
-}
-
 .header__nav__text{
   font-family: "Pt Sans";
   font-weight: 400;
@@ -48,7 +45,6 @@ display: inline-flex;
   color:white;
 }
 .header__nav__text:hover{
-
     color:#78BE21
 }
 
@@ -63,14 +59,16 @@ display: inline-flex;
   font-family: "Averta";
   font-weight: bold;
   line-height: 17px;
-  margin: 40px 48px 41px 0;
+  margin: 40px 78px 41px 0;
 }
 
 .header__nav__dropdown{
   border: 1px solid #626262;
   box-sizing: border-box;
+  left:100px;
+  bottom: 5px;
+  color: white;
 }
-
 
 .div__img--principal{
   width:1920px;
@@ -79,11 +77,6 @@ display: inline-flex;
   opacity: 1;
 }
 
-
-.card__horizontal{
-  display: flex;
-  flex-direction: row;
-}
 
 
 /*Buttons BEM Methodologies */
@@ -94,16 +87,15 @@ display: inline-flex;
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 0.15em;
   font-family: "Averta";
   font-weight: bold;
   line-height: 17px;
-  margin: 40px 48px 41px 0;
   transition: 0.5s;
 }
 .button:link{
   text-decoration: none;
 }
-
 .button--white--blue{
   background: white;
   color:#317CAA;
@@ -113,7 +105,6 @@ display: inline-flex;
   background:#317CAA;
   border: 1px solid  #317CAA;
 }
-
 .button--white--bluemarine{
   background:white;
   color: #03257E;
@@ -123,9 +114,8 @@ display: inline-flex;
   color:white;
   border: 1px solid  white;
 }
-
 .button--white--green{
-  padding:5px 29px;
+  padding:9px 29px;
   background:white;
   color: #78BE21;
   border: 1px solid #78BE21;
@@ -134,10 +124,9 @@ display: inline-flex;
 }
 .button--white--green:hover{
   color: #78BE21;
-
 }
 .button--white--green--active{
-  padding:5px 29px;
+  padding:9px 29px;
   background: #78BE21 ;
   color:white;
   box-shadow: 0px 5px 14px rgba(7, 206, 110, 0.34)
@@ -154,7 +143,6 @@ display: inline-flex;
   color:white;
   border: 1px solid  white;
 }
-
 .button--orange{
   background: #FF5E0F;
   color:white;
@@ -164,7 +152,6 @@ display: inline-flex;
   color:#FF5E0F;
   border: 1px solid  #FF5E0F;
 }
-
 .button--yellow{
   background: #FFBF3F;
   color:white;
@@ -174,7 +161,6 @@ display: inline-flex;
   color:#FFBF3F;
   border: 1px solid  #FFBF3F;
 }
-
 .button--blue{
   background:#56CCF2;
   color: #03257E;
@@ -184,7 +170,6 @@ display: inline-flex;
   color:#56CCF2;
   border: 1px solid  #56CCF2;
 }
-
 .button--white--gray{
   background: white;
   color:#4F4F40;
@@ -195,8 +180,30 @@ display: inline-flex;
   color:white;
   border:1px solid white;
 }
-/* Texts BEM  Methodologies */
 
+.button__actived{
+  padding:15px 20px;
+  background:#78BE21;
+  border-radius:50%;
+}
+.button__actived:hover{
+  cursor: pointer;
+  box-shadow: 0px 5px 14px rgba(7, 206, 110, 0.34);
+  transform: scale(1.05) ;
+}
+.button__left{
+  position:absolute;
+  left:-2%;
+  top:31%;
+}
+.button__right{
+  position:absolute;
+  right:0.5%;
+  top:30%;
+}
+
+
+/* Texts BEM  Methodologies */
   /* Text PT Sans */
 
 .text{
@@ -215,12 +222,7 @@ display: inline-flex;
   line-height: 26px;
   letter-spacing: 0.03em;
 }
-.text--gray{
-  color:#6A6A57
-}
-.text--darkblue{
-  color:#051339
-}
+
   /* Text Averta */
 
 .text__title{
@@ -230,7 +232,6 @@ display: inline-flex;
   font-size: 48px;
   line-height: 49px;
 }
-
 .text__subtitle{
   font-family: "Averta";
   font-style: normal;
@@ -238,65 +239,61 @@ display: inline-flex;
   font-size: 38px;
   line-height: 45px;
 }
-
-.text__subtitle--white{
+.text--white{
   color:white;
 }
-
-.text__subtitle--orange{
+.text--orange{
   color:#FF5E0F;
 }
-
-.text__subtitle--yellow{
+.text--yellow{
   color:#FFBF3F;
 }
-
-.text__subtitle--violet{
+.text--violet{
   color:#606395;
 }
-
-.text__subtitle--green{
+.text--green{
   color:#78BE21;
 }
-
-.text__subtitle--darkorange {
+.text--darkorange {
   color:#FA4616
 }
-
+.text--gray{
+  color:#6A6A57
+}
+.text--lightgray{
+  color:#8AA6D5;
+}
+.text--darkblue{
+  color:#051339
+}
+.text--lightblue{
+  color:#56CCF2
+}
+.text--darkgray{
+  color:#4F4F40;
+}
+.text--pink{
+  color:#E31C79;
+  font-family: "Averta";
+}
 .text__info{
   font-family: "Averta";
   font-style: normal;
   font-weight: bold;
-  font-size: 19px;
+  font-size: 18px;
   line-height: 23px;
 }
 
-
 /* Cards BEM Methodologies*/
 
-.card{
-  max-width: 414px;
-  height: 403px;
-  display: inline;
-  clear: right;
-}
-.card__image{
-  max-width: 414px;
-  height: 290px;
-}
 
-
-.container{
-  display: grid;
-  grid-template-columns: auto auto auto
-}
-
-
-/* Content BEM Methologies*/
-
+/* Backgrounds BEM Methologies*/
 
 .section--background--gray{
   background: #F2F2EE;
+  width:100%;
+  height:520px;
+  padding:24px 0 33px;
 }
 .section--background--blue{
   background:#4698CA;
@@ -310,44 +307,160 @@ display: inline-flex;
 /*Footer BEM Methodologies*/
 
 .footer__top{
-background:#03257E;
-height:180px;
+  height:180px;
+  display: flex;
 }
+.footer__top__container{
+  display: flex;
+}
+.footer__top__textContainer{
+  width:341px;
+  height:46px;
+  z-index: 1;
+  margin:67px 69px 67px -120px;
+}
+.footer__top__buttonContainer{
+  margin:78px 0 53px;
+}
+.footer__top__input{
+  width: 225px;
+  height:49px;
+  margin: 0px 20px 55px 0;
+  background-color: transparent;
+  color:white;
+  font-family: "Averta";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  padding-left: 20px;
+}
+.footer__top__label{
+  color:white;
+  font-family: "Averta";
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: 46px;
+}
+
 .footer__middle{
-background:#012765;
-height:634px;
-display: grid;
-grid-template-columns: auto auto auto;
+  height:634px;
+  display: flex;
+}
+.footer__middle__container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.footer__middle__col1{
+  width:389px;
+  margin:52px 36px 0 344px;
+}
+.footer__middle__col2{
+  width:394px;
+  margin:52px 0 0 36px;
+}
+.footer__middle__col3{
+  width:394px;
+  margin:52px 355px 0 94px;
+}
+.footer__middle__item{
+  list-style: none;
+}
+.footer__middle__item__col1--margin{
+  margin: 10px 0;
+}
+.footer__middle__link__col1{
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+}
+.footer__middle__copyright{
+  width: 375px;
+  margin-top: 32px;
+}
+.footer__middle__copyright__text{
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.03em
+}
+.footer__middle_button{
+  margin-top: 33px;
+}
+.footer__middle__title{
+  width:238px;
+  height:46px;
+  margin-bottom: 13px;
+}
+.footer__middle__products{
+  margin-top: 12px;
+  border:1px solid #56CCF2;
+  width:394px;
+  height:265px;
+  box-sizing: border-box;
+  padding:26px 24px 0px 31px;
+}
+
+.footer__middle__email{
+  display:flex;
+}
+.footer__middle__link__col2{
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+}
+.footer__middle__link__col3{
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
 }
 .footer__bottom{
-background:#002053;
 height:90px;
 display: flex;
 align-items: center;
 justify-content: center;
 }
-
-
-
-
-.carousel{
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
+.footer__top--background{
+  background:#03257E;
 }
-.carousel__animation{
-  height: 288px;
-  width: 1242px;
-  
-  background: url("/assets/images/share-carousel/carousel/carousel.png");
-  transform: translate3d(0, 0, 0);
-  animation: moveSlideshow 30s linear infinite;
+.footer__middle--background{
+  background:#012765;
 }
-@keyframes moveSlideshow {
-  100% { 
-    transform: translateX(-100%);  
-  }
-  
+.footer__bottom--background{
+  background:#002053;
 }
+
+
+/*Sections BEM Methologies*/
+.section__primary--background{
+  background: linear-gradient(180deg, #050626 0%, rgba(2, 2, 15, 0.381395) 21.83%, rgba(0, 1, 4, 0.0988803) 45.62%, rgba(0, 0, 0, 0) 57.12%);
+}
+.section__dream-background{
+  width:1920px;
+  height:343px;
+  background:#3286C3;
+}
+
+
+/*Image BEM Methologies*/
+
 .image__navbar--logo{
   width:122.95px;
   height:80px;
@@ -356,10 +469,13 @@ justify-content: center;
   width:184px;
   height:124px;
 }
-
+.image__footer__mountain--size{
+  width:516px;
+  height:257px;
+}
 .image__primary--background{
   width:1920px;
-  height:1200px; 
+  height:765px; 
 }
 .image__card--size{
   width:414px;
@@ -369,36 +485,576 @@ justify-content: center;
   width:120px;
   height:120px;
 }
-.image--energy{
+.image__energy--size{
   width:605px;
   height:477px;
 }
-.image--flavor{
+.image__flavor--size{
   width:1042px;
-  height:780px
+  height:650px
 }
-.image--happy{
+.image__happy--size{
   width:288px;
   height:187px;
 } 
-.image--sport{
+.image__sport--size{
   width:288px;
   height:288px;
 }
-.image--partner{
-  width:594px;
+.image__partner--size{
+  width:579px;
   height:463px;
 }
-
-.image--cards{
+.image__cards--size{
   width:57px;
   height:35px;
 }
-.image--certificate{
+.image__certificate--size{
   width:126px;
   height:72px;
 }
-.image--nerau{
+.image__nerau--size{
   width:88px;
   height:28px;
 }
+
+/*Mudanças de nomes são necessárias a partir daqui*/
+
+.footer__middle__icon{
+  margin: 1px 11px 0 0 ;
+}
+
+.footer__middle__certificates{
+  width:295px;
+  box-sizing: border-box;
+}
+.footer__list__certificates{
+  display: grid;
+  grid-template-columns: auto auto;
+  
+}
+.testeli{
+  margin: 12px 0 0 0;
+  display: inline-block;
+}
+
+.teste_cards{
+  width:280px;
+  box-sizing: border-box;
+  margin-bottom: 54px;
+}
+.teste_ul_cards{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  
+}
+.teste_li_cards{
+  margin: 10px 0 0 0;
+  display: inline-block;
+}
+
+.teste_social{
+  width:86px;
+  box-sizing: border-box;
+  margin-bottom: 41px;
+}
+.teste_ul_social{
+  display: grid;
+  grid-template-columns: auto auto auto; 
+} 
+.teste_li_social{
+  margin-right: 22px;
+  display: inline-block;
+}
+.teste_text{
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.02em;
+}
+.test_partner_texts{
+  padding: 82px 0px;
+  width: 472px;
+  box-sizing: border-box;
+  
+}
+.text_teste{
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #6A6A57;
+  letter-spacing: 0.03em;
+}
+.teste_partner{
+  display: grid;
+  grid-template-columns: auto auto; 
+  max-width: 1335px;
+  margin-left: 395px;
+}
+.layout{
+  margin-left:-100px
+}
+.teste_margin{
+  margin-top: 35px;
+}
+
+.section_esportes{
+  width:1290px;
+  height:603px;
+  margin: 100px 315px 94px;
+}
+
+.section_esportes_text1{
+text-align: center;
+}
+.section_esportes_text2{
+ margin-top: 10px;
+ margin-left: 25px;
+ width: 233px;
+ height: 30px;
+  }
+.section_esportes_name{
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 23px;
+}
+.section_esportes_class{
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.03em
+}
+.text__container{
+  width: 400px;
+  margin: auto;
+}
+.section_esportes_divtext{
+  width:818px;
+  height:52px;
+  margin: 15px auto 0px;
+}
+.section_esportes_text2size{
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  margin-bottom: 0;
+}
+.links{
+  margin-right: 17px;
+}
+.section_esportes_divbuttons{
+  width:571px;
+  height:38px;
+  margin: 20px auto 30px 315px;
+}
+
+.icon--green{
+  margin-right: 2px;
+}
+
+.sport_cards{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.imagesport{
+  position:relative
+}
+
+
+.compartilhar{
+  width:1901px;
+  height:321px;
+  margin:100px 0 100px 210px;
+  
+}
+.testegrids{
+  display:grid;
+  grid-template-columns: 35% 65%;
+  overflow:hidden
+  
+}
+.compartilhar_context{
+  width:393px;
+  margin:0 75px 59px 191px;
+}
+.compartilhar_text_cont{
+  width:393px;
+  height: 134px;
+  margin: 27px 0 14px ;
+  box-sizing: border-box;
+}
+.compartilhar_subtext_cont{
+  width:393px;
+  height: 25px;
+  margin: 0px 0 14px ;
+}
+.compartilhar_img_cont{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 1102px;
+  height: 288px;
+  grid-gap:30px ;
+  overflow:hidden
+}
+
+.flavor_section{
+  width:1399px;
+  height:780px;
+  margin: 29px 340px 27px 181px;
+
+}
+.teste_flavor{
+  display:grid;
+  grid-template-columns: 70% 30%;
+}
+.flavor_text-content{
+  width: 510px;
+  height:133px;
+  box-sizing: border-box;
+  margin-top:260px;
+  margin-left: -70px;
+}
+.flavor_text{
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 45px;
+  display: flex;
+  align-items: center;
+}
+.flavor_subtext{
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  margin-bottom: 35px;
+}
+
+
+
+.play_content{
+  margin-left:50px;
+  z-index:1
+}
+.play_icon{
+  padding: 40px;
+  background: #FA4616;
+  border-radius: 50%;
+  box-shadow: 0px 22px 80px rgba(29, 27, 24, 0.07), 0px 22.2437px 55.4997px rgba(29, 27, 24, 0.0771599), 0px 23.2607px 48.4373px rgba(29, 27, 24, 0.0756864), 0px 24.6609px 44.6163px rgba(29, 27, 24, 0.0644444), 0px 25.9607px 41.3692px rgba(29, 27, 24, 0.0443511), 0px 26.3799px 36.8572px rgba(29, 27, 24, 0.0210201), 0px 24.0804px 28.1652px rgba(29, 27, 24, 0.00397918);
+}
+.play_p{
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13.2px;
+  line-height: 26px;
+  letter-spacing: 0.03em
+}
+.video_text_container{
+  width: 422px;
+  height:338px;
+  margin:57px 0 0;
+}
+.video_text_title{
+  width: 422px;
+  height:76px;
+  margin:58px 0 0 ;
+}
+.video_button_container{
+  width: 422px;
+  height:338px;
+  margin:27px 0 0 ;
+}
+.video_info_container{
+  width:571px;
+  height:654px;
+  padding: 58px 93px 55px 56px;
+}
+.video_container{
+  width:1241px;
+  height:654px;
+  margin: 300px 285px 0 339px;
+}
+.video_grid{
+  display:grid;
+  grid-template-columns: 30% 70%;
+}
+.video_image{
+  width:  739px;
+  height:492px;
+  margin:135px 271px 0 273px;
+  position: relative;
+}
+.play_absolute{
+  left:-15%;
+  top:37%;
+  position: absolute;
+}
+
+.initial{
+background:#3286C3;
+width: 1920px;
+height:343px;
+padding-top: 40px;
+}
+.initial_container{
+width:1241px;
+}
+.initial_text_container{
+  width:607px;
+  height:150px;
+}
+.initial_text{
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 49px;
+  display: flex;
+  align-items: center;
+}
+.initital_subtext_content{
+  width:238px;
+  height:104px;
+}
+.initital_subtext{
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.03em
+}
+.initial_button{
+  width:182px;
+  height:158px;
+  padding:40px 49px 28px;
+  background: #2E7BB2;
+  font-family:" PT Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.card_container{
+  display:grid;
+  grid-template-columns: auto auto auto;
+  width: 1241px;
+  margin: 0 307px 0 372px;
+}
+.card_icon_container{
+  position: relative;
+}
+.card_icon_initial{
+  position: absolute;
+  bottom:26px;
+  left:26px;
+}
+.card_info_cont{
+  display:grid;
+  grid-template-columns: 39% 61%;
+}
+.cardaqui{
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.texte1{
+width:236px;
+margin-top:20px
+}
+.texte2{
+width:241px;
+margin-top:20px
+}
+.texte3{
+width:225px;
+margin-top:20px
+}
+.textoaqui{
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  color: #051339;
+}
+.textocontainer{
+  width:275px;
+  height:104px;
+  margin-top: 23px;
+}
+.titlecontainer{
+  width:607px;
+  height:150px;
+  margin: 0 29px 39px 370px;
+}
+.grids{
+  display:grid;
+  grid-template-columns: auto auto auto;
+}
+
+.gridbutton{
+background: #2E7BB2;
+width:182px;
+height:158px;
+margin:-6px 340px 0 150px;
+padding: 30px 35px 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.gridbutton:hover{
+  background:#115b91;
+  cursor: pointer;
+}
+.gridcontainerinside{
+  width: 115px;
+  height: 28px;
+  box-sizing: border-box;
+  margin: auto;
+}
+.gridicon{
+  margin: 0 85px 20px; 
+}
+
+.textbut{
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.feliz{
+  width:1772px;
+  height:546px;
+  margin:-100px 0 180px 345px;
+  display: grid;
+  grid-template-columns: auto auto ;
+  position: relative;
+ 
+}
+.feliz_content{
+  margin:67px 74px 136px 0px
+}
+.feliz_button{
+  margin-top: 36px;
+}
+
+.feliz_img{
+  width: 200px;
+ 
+}
+.feliz_img_cont{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 1102px;
+
+  grid-gap:30px ;
+  overflow:hidden;
+  
+}
+
+
+.feliz_card_container{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 1102px;
+  height: 288px;
+  grid-gap:30px ;
+  overflow:hidden;
+}
+.feliz_card_back{
+  width:425px;
+  height:456px;
+  background: linear-gradient(270deg, #fafaf8 6.82%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+  position: absolute;
+  right:100px
+}
+.iconorange{
+  position: absolute;
+  background:#FF7F41;
+  padding:15px 20px;
+  right:270px;
+  bottom:190px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+.felizbk{
+  width:684px;
+  height:546px;
+  padding:122px 228px 136px 62px;
+}
+
+.feliz_cards{
+  margin: 132px 0 0 -350px;
+  
+}
+.feliz_card{
+  width: 288px;
+  height:421px;
+}
+.feliz_image{
+  width:288px;
+  height:187px;
+}
+.feliz_text_content{
+  height:234px;
+  padding:20px 19px;
+  background:white
+}
+.feliz_card_title{
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 23px;
+  color:#4698CA
+}
+.feliz_card_text{
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+}
+.feliz_btn_card{
+  font-family: "Averta";
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 15px;
+letter-spacing: 0.03em;
+border: 1px solid #E0E0E0;
+box-sizing: border-box;
+padding: 7px 10px;
+}
+
